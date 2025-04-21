@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trainwrecks War Reports BG1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+</head>
+<body>
+
+    <!-- BG1 WAR REPORT STARTS HERE -->
+    <section class="report-wrapper">
+        <div class="aw-report" id="aw-report">
+            <!-- BG1 Title Starts Here -->
+            <div class="aw-report-title" id="bg1-report-title">
+                <img src="img/BG1-AW-REPORT.png" alt="">
+                <img src="img/WAR-REPORT-TITLE.png" alt="">
+                <img src="img/TW-LOGO.png" alt="">
+            </div>
+            <!-- BG1 Title Ends Here -->
+
+            <!-- Report Details Start Here -->
+            <div class="report-details">
+                <!-- Player Name Area Starts Here -->
+                <div class="player-area">
+                    <div class="player-name top">
+                        <p>Player Name</p>
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 1 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 2 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 3 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 4 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 5 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 6 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 7 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 8 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 9 name...">
+                    </div>
+                    <div class="player-name">
+                        <input type="text" placeholder="Player 10 name (backup)...">
+                    </div>
+                </div>
+                <!-- Player Name Area Ends Here -->
+                
+                <!-- Fights Area Starts Here -->
+                <div class="fights-total">
+                    <div class="fights-player">
+                        <p>Fights Taken</p>
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P1 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P2 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P3 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P4 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P5 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P6 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P7 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P8 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P9 Fights...">
+                    </div>
+                    <div class="fights-player">
+                        <input type="text" autocomplete="off" placeholder="P10 Fights...">
+                    </div>
+                </div>
+                <!-- Fights Area Ends Here -->
+                
+                <!-- AB Lost Area Starts Here -->
+                <div class="ab-lost-area">
+                    <div class="ab-lost-player">
+                        <p>AB Lost</p>
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl1" onkeyup="sumAbl();" placeholder="P1 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl2" onkeyup="sumAbl();" placeholder="P2 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl3" onkeyup="sumAbl();" placeholder="P3 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl4" onkeyup="sumAbl();" placeholder="P4 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl5" onkeyup="sumAbl();" placeholder="P5 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl6" onkeyup="sumAbl();" placeholder="P6 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl7" onkeyup="sumAbl();" placeholder="P7 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl8" onkeyup="sumAbl();" placeholder="P8 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl9" onkeyup="sumAbl();" placeholder="P9 ABL...">
+                    </div>
+                    <div class="ab-lost-player">
+                        <input type="text" autocomplete="off" id="abl10" onkeyup="sumAbl();" placeholder="P10 ABL...">
+                    </div>
+                </div>
+                <!-- AB Lost Area Ends Here -->
+                
+                <!-- AB Secured Area Starts Here -->
+                 <div class="ab-secured-area">
+                    <div class="ab-secured-player">
+                        <p>AB Secured</p>
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs1" onkeyup="sumAbs();" placeholder="P1 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs2" onkeyup="sumAbs();" placeholder="P2 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs3" onkeyup="sumAbs();" placeholder="P3 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs4" onkeyup="sumAbs();" placeholder="P4 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs5" onkeyup="sumAbs();" placeholder="P5 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs6" onkeyup="sumAbs();" placeholder="P6 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs7" onkeyup="sumAbs();" placeholder="P7 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs8" onkeyup="sumAbs();" placeholder="P8 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs9" onkeyup="sumAbs();" placeholder="P9 ABS...">
+                    </div>
+                    <div class="ab-secured-player">
+                        <input type="text" autocomplete="off" id="abs10" onkeyup="sumAbs();" placeholder="P10 ABS...">
+                    </div>
+                 </div>
+                <!-- AB Secured Area Ends Here -->
+            </div>
+            <!-- Report Details End Here -->
+
+            <!-- Total Results Area Starts Here -->
+            <div class="total-results">
+                <div class="total-toggle">
+                    <div class="tog-btn tog-bor-rad" id="tog">
+                        <input type="checkbox" class="checkbox" />
+                        <div class="knobs">
+                            <span></span>
+                        </div>
+                        <div class="layer"></div>
+                    </div>
+                </div>
+                <div class="total-text"><p>Totals:</p></div>
+                <div class="total-ab-lost">
+                    <input type="text" autocomplete="off" id="abl11" placeholder="Total lost...">
+                </div>
+                <div class="total-ab-secured">
+                    <input type="text" autocomplete="off" id="abs11" placeholder="Total secured...">
+                </div>
+            </div>
+            <!-- Total Results Area ends Here -->
+        </div>
+
+        <!-- BG1 Button Area Starts Here -->
+        <div class="button-area">
+            <a href="#" id="export-aw-report">Download BG1</a>
+            <a href="index2.html">View BG2</a>
+            <a href="index3.html">View BG3</a>
+        </div>
+        <!-- BG1 Button Area Ends Here -->
+    </section>
+    <!-- BG1 WAR REPORT ENDS HERE -->
+
+    <script src="script.js"></script>
+</body>
+</html>

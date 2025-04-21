@@ -1,0 +1,428 @@
+/* Global Styles Start Here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body, html {
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    --clr-dark-gray: #2f3136;
+    --clr-dark-gray-tr: rgba(47, 49, 54, 0.9);
+    --clr-white: #f5f5f5;
+    --clr-black: #000000;
+    --fs-p: 1.25rem;
+    --bor-rad: 2px;
+    --box-shad-dark: 0 0 12px #18191b;
+    --box-shad-morph: 5px 5px 5px #282a2e,
+                       -3px -3px 6px #36383e; 
+    --box-shad-morph-inset: inset 5px 5px 5px #282a2e,
+                            inset -1px -1px 1px #36383e;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: #2f3136;
+}
+/* Global Styles End Here */
+
+/* Main Styles Start Here */
+.report-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.aw-report {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: auto;
+    background-color: var(--clr-dark-gray);
+    box-shadow: var(--box-shad-morph-inset);
+    border-radius: var(--bor-rad);
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+}
+/* Main Styles End Here */
+
+/* Title Styles Start Here */
+.aw-report-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: .5rem 4.75rem;  
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    box-shadow: var(--box-shad-dark);
+    background-color: var(--clr-dark-gray-tr);
+    border-radius: var(--bor-rad);
+}
+.aw-report-title img {
+    height: auto;
+    opacity: 0.6;
+}
+#bg1-report-title img:nth-child(1) {
+    width: 45px;
+} 
+#bg2-report-title img:nth-child(1) {
+    width: 50px;
+} 
+#bg3-report-title img:nth-child(1) {
+    width: 50px;
+} 
+.aw-report-title img:nth-child(2) {
+    width: 200px;
+}
+.aw-report-title img:nth-child(3) {
+    width: 45px;
+}
+/* Title Styles End Here */
+
+/* Report Details Styles Start Here */
+.report-details {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: .5rem;
+}
+.report-details p {
+    font-size: var(--fs-p);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: gray;
+}
+.player-name.top {
+    box-shadow: none;
+    align-self: baseline;
+    padding-left: 1rem;
+}
+/* Report Details Styles End Here */
+
+/* Player Name Styles Start Here */
+.player-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.player-name {
+    position: relative;
+    margin: .25rem 0;
+    box-shadow: var(--box-shad-dark);
+    margin-right: .25rem;
+}
+
+.player-name input {
+    padding: .75rem 1rem;
+    width: 220px;
+    outline: none;
+    border: none;
+    background-color: var(--clr-dark-gray);
+    color: var(--clr-white);
+}
+.player-name input[type=text]:focus {
+    border: 1px solid red;
+    padding: .65rem 1rem;
+} 
+
+.player-name input::placeholder {
+    font-size: 1.1rem;
+}
+/* Player Name Styles End Here */
+
+/* Fights Area Styles Start Here */
+.fights-total {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.fights-player {
+    position: relative;
+    margin: .25rem 0;
+}
+.fights-player input {
+    padding: .75rem 1rem;
+    width: 108px;
+    background-color: var(--clr-dark-gray);
+    outline: none;
+    border: none;
+    box-shadow: var(--box-shad-morph-inset);
+    color: var(--clr-white);
+}
+.fights-player input[type=text]:focus {
+    border: 1px solid red;
+    padding: .65rem 1rem;
+}
+.fights-player input::placeholder {
+    font-size: 1.1rem;
+}
+/* Fights Area Styles End Here */
+
+/* AB Lost Styles Start Here */
+.ab-lost-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.ab-lost-player {
+    position: relative;
+    margin: .25rem 0;
+}
+.ab-lost-player input {
+    padding: .75rem 1rem;
+    width: 108px;
+    background-color: var(--clr-dark-gray);
+    outline: none;
+    border: none;
+    box-shadow: var(--box-shad-morph-inset);
+    color: var(--clr-white);
+}
+.ab-lost-player input[type=text]:focus {
+    border: 1px solid red;
+    padding: .65rem 1rem;
+}
+.ab-lost-player input::placeholder {
+    font-size: 1.1rem;
+}
+
+/* AB Lost Styles End Here */
+
+/* AB Secured Styles Start Here */
+.ab-secured-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.ab-secured-player {
+    position: relative;
+    margin: .25rem 0;
+}
+.ab-secured-player input {
+    padding: .75rem 1rem;
+    width: 108px;
+    background-color: var(--clr-dark-gray);
+    outline: none;
+    border: none;
+    box-shadow: var(--box-shad-morph-inset);
+    color: var(--clr-white);
+}
+.ab-secured-player input[type=text]:focus {
+    border: 1px solid red;
+    padding: .65rem 1rem;
+}
+.ab-secured-player input::placeholder {
+    font-size: 1.1rem;
+}
+/* AB Secured Styles End Here */
+
+/* Toggle Styles Start Here */
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.tog-btn {
+    position: relative;
+    /* top: 50%; */
+    width: 74px;
+    height: 28px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+.tog-btn.tog-bor-rad {
+    border-radius: 2px;
+} 
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+.knobs {
+    z-index: 2;
+}
+.layer {
+    width: 100%;
+    /* background-color: #ebf7fc; */
+    box-shadow: var(--box-shad-morph-inset);
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+#tog .knobs:before,
+#tog .knobs:after,
+#tog .knobs span {
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 2px;
+    transition: 0.3s ease all;
+}
+#tog .knobs:before,
+#tog .knobs:after {
+    /* color: #4e4e4e; */
+    color: gray;
+    z-index: 1;
+}
+#tog .knobs:before {
+    content: "WIN";
+    left: 3px;
+    font-size: 1rem;
+    top: 0;
+}
+#tog .knobs:after {
+    content: "LOSS";
+    right: 6px;
+    top: 0;
+    padding-top: 10px;
+}
+#tog .knobs span {
+    width: 28px;
+    height: 20px;
+    left: 42px;
+    /* background-color: #03a9f4; */
+    background-color: #077dcc;
+    z-index: 2;
+}
+#tog .checkbox:checked + .knobs span {
+    left: 4px;
+    /* background-color: #f44336; */
+    background-color: #cd0404;
+}
+/* #tog .checkbox:checked ~ .layer {
+    background-color: #fcebeb;
+} */
+/* Toggle Styles End Here */
+
+/* Total Results Styles Start Here */
+.total-results {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+.total-toggle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    /* box-shadow: var(--box-shad-morph-inset); */
+}
+.total-text,
+.total-ab-lost,
+.total-ab-secured {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    color: white;
+}
+.total-toggle {
+    padding: .25rem 0;
+    font-size: 1.1rem;
+}
+.total-text {
+    font-size: var(--fs-p);
+    text-transform: uppercase;
+    color: gray;
+    letter-spacing: 1px;
+}
+.total-ab-lost input, 
+.total-ab-secured input {
+    padding: .75rem 1rem;
+    width: 108px;
+    background-color: var(--clr-dark-gray);
+    outline: none;
+    border: none;
+    box-shadow: var(--box-shad-morph-inset);
+    color: var(--clr-white);
+}
+.total-ab-lost input[type=text]:focus,
+.total-ab-secured input[type=text]:focus {
+    border: 1px solid red;
+}
+.total-ab-lost input::placeholder, 
+.total-ab-secured input::placeholder {
+    font-size: 1.1rem;
+}
+/* Total Results Styles End Here */
+
+/* Button Area Styles Start Here */
+.button-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.button-area {
+    margin-top: 2.5rem;
+}
+.button-area a {
+    margin: 0 2rem;
+    width: 150px;
+    text-decoration: none;
+    color: var(--clr-white);
+    font-size: var(--fs-p);
+    box-shadow: var(--box-shad-dark);
+    text-align: center;
+    padding: .8rem 0;
+    border-radius: var(--bor-rad);
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+}
+.button-area a:hover {
+    box-shadow: var(--box-shad-morph-inset);
+    border-radius: var(--bor-rad);
+}
+/* Button Area Styles End Here */
+
+/* Responsive Styles Start Here */
+/* Responsive Styles End Here */
