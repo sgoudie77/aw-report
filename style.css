@@ -111,7 +111,6 @@ section {
 .player-name.top {
     box-shadow: none;
     align-self: baseline;
-    padding-left: 1rem;
 }
 /* Report Details Styles End Here */
 
@@ -122,18 +121,17 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 36.5%;
 }
 .player-name {
     position: relative;
     margin: .25rem 0;
     box-shadow: var(--box-shad-dark);
-    margin-right: .25rem;
+    width: 100%;
 }
-
 .player-name input {
     padding: .75rem 1rem;
-    width: 220px;
+    width: 100%;
     outline: none;
     border: none;
     background-color: var(--clr-dark-gray);
@@ -143,7 +141,6 @@ section {
     border: 1px solid red;
     padding: .65rem 1rem;
 } 
-
 .player-name input::placeholder {
     font-size: 1.1rem;
 }
@@ -161,10 +158,13 @@ section {
 .fights-player {
     position: relative;
     margin: .25rem 0;
+    
+    width: 100%;
+    margin-left: .5rem;
 }
 .fights-player input {
     padding: .75rem 1rem;
-    width: 108px;
+    width:100%;
     background-color: var(--clr-dark-gray);
     outline: none;
     border: none;
@@ -192,10 +192,12 @@ section {
 .ab-lost-player {
     position: relative;
     margin: .25rem 0;
+    width: 100%;
+    margin-left: .5rem;
 }
 .ab-lost-player input {
     padding: .75rem 1rem;
-    width: 108px;
+    width: 100%;
     background-color: var(--clr-dark-gray);
     outline: none;
     border: none;
@@ -209,7 +211,6 @@ section {
 .ab-lost-player input::placeholder {
     font-size: 1.1rem;
 }
-
 /* AB Lost Styles End Here */
 
 /* AB Secured Styles Start Here */
@@ -224,10 +225,12 @@ section {
 .ab-secured-player {
     position: relative;
     margin: .25rem 0;
+    width: 100%;
+    margin-left: .5rem;
 }
 .ab-secured-player input {
     padding: .75rem 1rem;
-    width: 108px;
+    width:100%;
     background-color: var(--clr-dark-gray);
     outline: none;
     border: none;
@@ -349,9 +352,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 37%;
     height: auto;
-    /* box-shadow: var(--box-shad-morph-inset); */
 }
 .total-text,
 .total-ab-lost,
@@ -362,6 +364,7 @@ section {
     align-items: center;
     width: 20%;
     color: white;
+    margin-left: .5rem;
 }
 .total-toggle {
     padding: .25rem 0;
@@ -376,7 +379,7 @@ section {
 .total-ab-lost input, 
 .total-ab-secured input {
     padding: .75rem 1rem;
-    width: 108px;
+    width: 100%;
     background-color: var(--clr-dark-gray);
     outline: none;
     border: none;
@@ -407,7 +410,7 @@ section {
 }
 .button-area a {
     margin: 0 2rem;
-    width: 150px;
+    width: 11%;
     text-decoration: none;
     color: var(--clr-white);
     font-size: var(--fs-p);
@@ -425,4 +428,149 @@ section {
 /* Button Area Styles End Here */
 
 /* Responsive Styles Start Here */
+@media screen and (max-width: 1384px) {
+    #bg1-report-title img:nth-child(1) {
+        width: 42px;
+    } 
+    #bg2-report-title img:nth-child(1) {
+        width: 45px;
+    } 
+    #bg3-report-title img:nth-child(1) {
+        width: 45px;
+    } 
+    .aw-report-title img:nth-child(2) {
+        width: 180px;
+    }
+    .aw-report-title img:nth-child(3) {
+        width: 45px;
+    }
+    .aw-report-title {
+        padding: .5rem 1.75rem;
+    }
+    .report-details p {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .player-name.top p {
+        padding: 0 4.75rem;
+        text-align: center;
+    }
+    .report-details p {
+        margin-left: 0;
+    }
+    .fights-total p,
+    .ab-secured-player p {
+        padding: 0 2rem;
+        text-align: center;
+    }
+    .ab-lost-player p {
+        padding: 0 2.5rem;
+        text-align: center;
+    }
+    .player-area {
+        width: 35.5%;
+    }
+    .total-text {
+        font-size: 1.25rem;
+    }
+    .total-toggle {
+        width: 36.5%;
+    }
+    .button-area a {
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 1099px) {
+    .fights-total p,
+    .ab-secured-player p {
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 991px) {
+    .report-details {
+        text-align: center;
+    }
+    .report-details p {
+        padding: 0 1.75rem;
+        text-align: center;
+    }
+    .fights-total p,
+    .ab-secured-player p {
+        padding: 0 .5rem;
+    }
+    .player-name.top p {
+        padding: 0 2.5rem;  
+    }
+    .player-area {
+        width: 33%;
+    }
+    .fights-total,
+    .ab-lost-area,
+    .ab-secured-area {
+        width: 21%;
+    }
+    .total-toggle {
+        width:34.5%;
+    }
+    .total-text,
+    .total-ab-lost,
+    .total-ab-secured {
+        margin-left: .3rem;
+        width: 21%;
+    }
+    .total-text {
+        font-size: 1.1rem;
+    }
+    .button-area a {
+        margin: 0 .75rem;
+        font-size: .85rem;
+        padding: .8rem .4rem;
+        width: 12.5%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #bg1-report-title img:nth-child(1) {
+        width: 32px;
+    } 
+    #bg2-report-title img:nth-child(1) {
+        width: 34px;
+    } 
+    #bg3-report-title img:nth-child(1) {
+        width: 34px;
+    } 
+    .aw-report-title img:nth-child(2) {
+        width: 135px;
+    }
+    .aw-report-title img:nth-child(3) {
+        width: 30px;
+    }
+    .fights-total p {
+        font-size: .75rem;
+    }
+    .ab-secured-player p {
+        font-size: .75rem;
+    }
+    .ab-lost-player p {
+        padding: 0 1.5rem;
+        font-size: .75rem;
+    }
+    .player-name.top p {
+        padding: 0 2rem; 
+        font-size: .75rem; 
+    }
+    .total-text {
+        font-size: .85rem;
+    }
+    .button-area a {
+        padding: .8rem 1.5rem;
+    }
+}
+/* @media screen and (max-width: 599px) {
+}
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 360px) {
+} */
 /* Responsive Styles End Here */
