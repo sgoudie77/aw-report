@@ -1,4 +1,8 @@
 /* Global Styles Start Here */
+@font-face {
+    font-family: 'Black Ops One';
+    src: url(fonts/BlackOpsOne-Regular.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -64,31 +68,29 @@ section {
     align-items: center;
     width: 100%;
     height: 60px;
-    padding: .5rem 4.75rem;  
     margin-top: .25rem;
     margin-bottom: .5rem;
     box-shadow: var(--box-shad-dark);
     background-color: var(--clr-dark-gray-tr);
     border-radius: var(--bor-rad);
 }
-.aw-report-title img {
-    height: auto;
-    opacity: 0.6;
+.aw-report-title p {
+    font-family: 'Black Ops One';
+} 
+.aw-report-title p:nth-child(1) {
+    padding-left: .75rem;
+    font-size: 2.5rem;
+    color: gray;
 }
-#bg1-report-title img:nth-child(1) {
-    width: 45px;
-} 
-#bg2-report-title img:nth-child(1) {
-    width: 50px;
-} 
-#bg3-report-title img:nth-child(1) {
-    width: 50px;
-} 
-.aw-report-title img:nth-child(2) {
-    width: 200px;
+.aw-report-title p:nth-child(2) {
+    padding-top: .2rem;
+    font-size: 3.2rem;
+    color: lightgray;
 }
-.aw-report-title img:nth-child(3) {
-    width: 45px;
+.aw-report-title p:nth-child(3) {
+    padding-right: .75rem;
+    font-size: 2.5rem;
+    color: gray;
 }
 /* Title Styles End Here */
 
@@ -408,12 +410,14 @@ section {
 .button-area {
     margin-top: 2.5rem;
 }
-.button-area a {
-    margin: 0 2rem;
-    width: 11%;
+.button-area a,
+#save, #saveb, #savec,
+ #reload, #reloadb, #reloadc {
+    margin: 0 1rem;
+    width: 7.5%;
     text-decoration: none;
     color: var(--clr-white);
-    font-size: var(--fs-p);
+    font-size: 1rem;
     box-shadow: var(--box-shad-dark);
     text-align: center;
     padding: .8rem 0;
@@ -421,29 +425,20 @@ section {
     letter-spacing: 1px;
     transition: 0.3s ease-in-out;
 }
-.button-area a:hover {
+.button-area a:hover,
+#save:hover, #saveb:hover, #savec:hover,
+#reload:hover, #reloadb:hover, #reloadc:hover {
     box-shadow: var(--box-shad-morph-inset);
     border-radius: var(--bor-rad);
+}
+#save, #saveb, #savec,
+#reload, #reloadb, #reloadc {
+    cursor: pointer;
 }
 /* Button Area Styles End Here */
 
 /* Responsive Styles Start Here */
 @media screen and (max-width: 1384px) {
-    #bg1-report-title img:nth-child(1) {
-        width: 42px;
-    } 
-    #bg2-report-title img:nth-child(1) {
-        width: 45px;
-    } 
-    #bg3-report-title img:nth-child(1) {
-        width: 45px;
-    } 
-    .aw-report-title img:nth-child(2) {
-        width: 180px;
-    }
-    .aw-report-title img:nth-child(3) {
-        width: 45px;
-    }
     .aw-report-title {
         padding: .5rem 1.75rem;
     }
@@ -481,8 +476,10 @@ section {
     .total-toggle {
         width: 36.5%;
     }
-    .button-area a {
-        font-size: 1.1rem;
+    .button-area a,
+    #save, #saveb, #savec,
+    #reload, #reloadb, #reloadc {
+        width: 11%;
     }
 }
 @media screen and (max-width: 1099px) {
@@ -526,7 +523,9 @@ section {
     .total-text {
         font-size: 1.1rem;
     }
-    .button-area a {
+    .button-area a,
+    #save, #saveb, #savec,
+    #reload, #reloadb, #reloadc {
         margin: 0 .75rem;
         font-size: .85rem;
         padding: .8rem .4rem;
@@ -534,21 +533,6 @@ section {
     }
 }
 @media screen and (max-width: 768px) {
-    #bg1-report-title img:nth-child(1) {
-        width: 32px;
-    } 
-    #bg2-report-title img:nth-child(1) {
-        width: 34px;
-    } 
-    #bg3-report-title img:nth-child(1) {
-        width: 34px;
-    } 
-    .aw-report-title img:nth-child(2) {
-        width: 135px;
-    }
-    .aw-report-title img:nth-child(3) {
-        width: 30px;
-    }
     .fights-total p {
         font-size: .75rem;
     }
@@ -566,14 +550,37 @@ section {
     .total-text {
         font-size: .85rem;
     }
-    .button-area a {
+    .button-area a,
+    #save, #saveb, #savec,
+    #reload, #reloadb, #reloadc {
+        position: relative;
+        display: flex;
+        justify-content: center;
         padding: .8rem 1.5rem;
-        width: 20%;
+        width: 10.5%;
+    }
+    .button-area a:nth-child(2),
+    .button-area a:nth-child(3) {
+        padding: .8rem 1.5rem;
     }
 }
-/* @media screen and (max-width: 599px) {
+@media screen and (max-width: 599px) {
+    .aw-report-title p:nth-child(1) {
+        font-size: 2rem;
+    }
+    .aw-report-title p:nth-child(2) {
+        font-size: 2.25rem;
+    }
+    .aw-report-title p:nth-child(3) {
+        font-size: 2rem;
+    }
+    .button-area a,
+    #save, #saveb, #savec,
+    #reload, #reloadb, #reloadc {
+        font-size: .75rem;
+    }
 }
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
 }
 @media screen and (max-width: 360px) {
 } */
