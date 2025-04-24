@@ -248,6 +248,66 @@ section {
 }
 /* AB Secured Styles End Here */
 
+/* War Number Styles Start Here */
+.war-num-tog {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 37%;
+}
+.war-num {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shad-morph-inset);
+    border-radius: 2px;
+    height: 29px;
+    margin-top: .25rem;
+}
+.war-num-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 28px;
+}
+.war-num input {
+    position: relative;
+    display: flex;
+    width: 24px;
+    margin-left: .5rem;
+    outline: none;
+    text-align: center;
+    background-color: lightgray;
+    border: none;
+    color: black;
+    border-radius: 2px;
+    padding: .2rem;
+}
+.war-num:before {
+    content: 'WAR';
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    position: absolute;
+    left: 6px;
+    z-index: 9;
+    color: gray;
+}
+.war-num:after {
+    content: '/12';
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1;
+    position: absolute;
+    right: 6px;
+    z-index: 9;
+    color: gray;
+}
+/* War Number Styles End Here */
+
 /* Toggle Styles Start Here */
 .knobs,
 .layer {
@@ -354,7 +414,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 37%;
     height: auto;
 }
 .total-text,
@@ -412,7 +471,7 @@ section {
 }
 .button-area a,
 #save, #saveb, #savec,
- #reload, #reloadb, #reloadc {
+#reload, #reloadb, #reloadc {
     margin: 0 1rem;
     width: 7.5%;
     text-decoration: none;
@@ -473,8 +532,14 @@ section {
     .total-text {
         font-size: 1.25rem;
     }
-    .total-toggle {
-        width: 36.5%;
+    .war-num-tog {
+        width: 37%;
+    }
+    .total-text,
+    .total-ab-lost,
+    .total-ab-secured {
+        margin-right: .35rem;
+        width: 20%;
     }
     .button-area a,
     #save, #saveb, #savec,
@@ -511,14 +576,11 @@ section {
     .ab-secured-area {
         width: 21%;
     }
-    .total-toggle {
-        width:34.5%;
-    }
     .total-text,
     .total-ab-lost,
     .total-ab-secured {
         margin-left: .3rem;
-        width: 21%;
+        width: 22.5%;
     }
     .total-text {
         font-size: 1.1rem;
@@ -573,6 +635,28 @@ section {
     }
     .aw-report-title p:nth-child(3) {
         font-size: 2rem;
+    }
+    .war-num-tog {
+        width: 37%;
+    }
+    .war-num-inner {
+        width: 80px;
+    }
+    .war-num:before,
+    .war-num:after {
+        font-size: 8px;
+    }
+    .war-num:before {
+        padding-top: .1rem;
+    }
+    .tog-btn {
+        width: 72px;
+    }
+    .total-toggle {
+        margin-left: .2rem;
+    }
+    .total-text {
+        width: 21.5%;
     }
     .button-area a,
     #save, #saveb, #savec,
