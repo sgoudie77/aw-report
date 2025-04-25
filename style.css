@@ -248,11 +248,77 @@ section {
 }
 /* AB Secured Styles End Here */
 
+/* Total Results Styles Start Here */
+.total-results {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 1.25rem;
+}
+.total-toggle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: .25rem 0;
+    font-size: 1.1rem;
+}
+/* .total-text, */
+.total-ab-lost,
+.total-ab-secured {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    color: white;
+    margin-left: .5rem;
+}
+.total-abs {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 45%;
+}
+.total-ab-lost:before,
+.total-ab-secured:before {
+        position: absolute;
+        content: 'TOTAL';
+        top:-9px;
+        left: 12px;
+        color: lightgray;
+}
+.total-ab-lost input, 
+.total-ab-secured input {
+    padding: .75rem 1rem;
+    width: 100%;
+    background-color: var(--clr-dark-gray);
+    outline: none;
+    border: none;
+    box-shadow: var(--box-shad-morph-inset);
+    color: var(--clr-white);
+}
+.total-ab-lost input[type=text]:focus,
+.total-ab-secured input[type=text]:focus {
+    border: 1px solid red;
+}
+.total-ab-lost input::placeholder, 
+.total-ab-secured input::placeholder {
+    font-size: 1.1rem;
+}
+/* Total Results Styles End Here */
+
 /* War Number Styles Start Here */
 .war-num-tog {
     position: relative;
     display: flex;
     justify-content: space-evenly;
+    /* width: 37%; */
     width: 37%;
 }
 .war-num {
@@ -273,7 +339,7 @@ section {
     width: 84px;
     height: 28px;
 }
-.war-num input {
+.war-num input { 
     position: relative;
     display: flex;
     width: 24px;
@@ -399,64 +465,6 @@ section {
 } */
 /* Toggle Styles End Here */
 
-/* Total Results Styles Start Here */
-.total-results {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-}
-.total-toggle {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-}
-.total-text,
-.total-ab-lost,
-.total-ab-secured {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    color: white;
-    margin-left: .5rem;
-}
-.total-toggle {
-    padding: .25rem 0;
-    font-size: 1.1rem;
-}
-.total-text {
-    font-size: var(--fs-p);
-    text-transform: uppercase;
-    color: gray;
-    letter-spacing: 1px;
-}
-.total-ab-lost input, 
-.total-ab-secured input {
-    padding: .75rem 1rem;
-    width: 100%;
-    background-color: var(--clr-dark-gray);
-    outline: none;
-    border: none;
-    box-shadow: var(--box-shad-morph-inset);
-    color: var(--clr-white);
-}
-.total-ab-lost input[type=text]:focus,
-.total-ab-secured input[type=text]:focus {
-    border: 1px solid red;
-}
-.total-ab-lost input::placeholder, 
-.total-ab-secured input::placeholder {
-    font-size: 1.1rem;
-}
-/* Total Results Styles End Here */
-
 /* Button Area Styles Start Here */
 .button-area {
     position: relative;
@@ -499,7 +507,7 @@ section {
 /* Responsive Styles Start Here */
 @media screen and (max-width: 1384px) {
     .aw-report-title {
-        padding: .5rem 1.75rem;
+        padding: 0 1.75rem;
     }
     .report-details p {
         font-size: 1rem;
@@ -529,17 +537,9 @@ section {
     .player-area {
         width: 35.5%;
     }
-    .total-text {
-        font-size: 1.25rem;
-    }
-    .war-num-tog {
-        width: 37%;
-    }
-    .total-text,
     .total-ab-lost,
     .total-ab-secured {
         margin-right: .35rem;
-        width: 20%;
     }
     .button-area a,
     #save, #saveb, #savec,
@@ -576,14 +576,19 @@ section {
     .ab-secured-area {
         width: 21%;
     }
-    .total-text,
+    .war-num-tog {
+        justify-content: center;
+        padding-right: 1rem;
+    }
+    .war-num {
+        margin-right: .35rem;
+    }
+    .total-toggle {
+        margin-left: .35rem;
+    }
     .total-ab-lost,
     .total-ab-secured {
-        margin-left: .3rem;
-        width: 22.5%;
-    }
-    .total-text {
-        font-size: 1.1rem;
+        width: 46%;
     }
     .button-area a,
     #save, #saveb, #savec,
@@ -609,8 +614,10 @@ section {
         padding: 0 2rem; 
         font-size: .75rem; 
     }
-    .total-text {
-        font-size: .85rem;
+    .total-ab-lost,
+    .total-ab-secured {
+        margin-left: .3rem;
+        width: 46%;
     }
     .button-area a,
     #save, #saveb, #savec,
@@ -628,16 +635,27 @@ section {
 }
 @media screen and (max-width: 599px) {
     .aw-report-title p:nth-child(1) {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     .aw-report-title p:nth-child(2) {
+        padding-bottom: .25rem;
         font-size: 2.25rem;
     }
     .aw-report-title p:nth-child(3) {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+    .total-toggle {
+        padding-left: .25rem;
     }
     .war-num-tog {
-        width: 37%;
+        justify-content: center;
+        width: 55%;
+    }
+    .war-num {
+        margin-right: .1rem;
+    }
+    .total-toggle {
+        margin-left: .1rem;
     }
     .war-num-inner {
         width: 80px;
@@ -652,20 +670,97 @@ section {
     .tog-btn {
         width: 72px;
     }
-    .total-toggle {
+    .total-ab-lost,
+    .total-ab-secured {
         margin-left: .2rem;
-    }
-    .total-text {
-        width: 21.5%;
+        width: 45%;
     }
     .button-area a,
     #save, #saveb, #savec,
     #reload, #reloadb, #reloadc {
         font-size: .75rem;
+        width: 14%;
+        margin: 0 .5rem;
     }
 }
-/* @media screen and (max-width: 480px) {
+@media screen and (max-width: 499px) {
+    .player-name.top p {
+        font-size: .8rem;
+        padding: 0 2.9rem;
+        text-align: center;
+    }
+    .fights-player p,
+    .ab-lost-player p,
+    .ab-secured-player p {
+        font-size: .8rem;
+    }
+    .war-num-tog {
+        width: 54%;
+        margin-right: 0;
+    }
+
+    .total-abs {
+        width: 46%;
+    }
+    .total-ab-lost,
+    .total-ab-secured {
+        margin-right: 0;
+    }
+    .total-ab-secured {
+        margin-left: .4rem;
+    }
+    .ab-lost-player p {
+        padding: 0 1.85rem;
+    }
+    .ab-secured-player p {
+        padding: 0 .8rem;
+    }
 }
-@media screen and (max-width: 360px) {
-} */
+@media screen and (max-width: 399px) {
+    .aw-report-title p:nth-child(1) {
+        font-size: 1.65rem;
+    }
+    .aw-report-title p:nth-child(2) {
+        padding-bottom: .25rem;
+        font-size: 2rem;
+    }
+    .aw-report-title p:nth-child(3) {
+        font-size: 1.65rem;
+    }
+    .player-name.top p {
+        padding: 0 2rem;
+    }
+    .war-num-inner {
+        width: 74px;
+    }
+    .war-num-tog {
+        padding-right: .1rem;
+    }
+    .total-toggle {
+        padding-left: .05rem;
+    }
+    .war-num:before {
+        left: 3px;
+    }
+    .war-num:after {
+        right: 3px;
+    }
+    .tog-btn {
+        width: 68px;
+    }
+    #tog .knobs:before,
+    #tog .knobs:after {
+        font-size: 8px;
+    }
+    #tog .knobs:before {
+        top: 1px;
+    }
+    #tog .knobs span {
+        width: 30px;
+        left: 34px;
+    }
+    .total-ab-lost {
+        margin-left: 0;
+    }
+}
 /* Responsive Styles End Here */
